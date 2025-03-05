@@ -5,17 +5,14 @@ $ python3 -m pip install --user ansible
 ## Inventory File:
 
 `Inventory.ini`:
-
+```
 [app] //Group Name
 ubuntu@ip
-
 ubuntu@ip
-
 [db]
 ubuntu@ip
-
 ubuntu@ip
-
+```
 
 ## Pass less authentication:
 
