@@ -5,8 +5,8 @@
 
   tasks:
   - name: Ensure apache is at the latest version
-    ansible.builtin.yum:
-      name: httpd
+    ansible.builtin.apt:
+      name: apache2
       state: latest
 
 - name: Update db servers
@@ -15,7 +15,7 @@
 
   tasks:
   - name: Ensure postgresql is at the latest version
-    ansible.builtin.yum:
+    ansible.builtin.apt:
       name: postgresql
       state: latest
 
