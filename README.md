@@ -8,9 +8,12 @@ $ python3 -m pip install --user ansible
 
 [app] //Group Name
 ubuntu@ip
+
 ubuntu@ip
+
 [db]
 ubuntu@ip
+
 ubuntu@ip
 
 
@@ -35,7 +38,7 @@ ubuntu@ip
 `ansible -i inventory.ini -m ping all/app/db<group>`
 
 -m : module
--i: inventory file
+-i : inventory file
 -a : Argument
 
 `ansible -i inventory.ini -m "shell" -a "apt update" all/app/db<group>`
