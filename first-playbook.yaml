@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install apache httpd
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        update_cache: yes
+    - name: Copy file to remote server
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/index.html
+        owner: root
+        group: root
+        mode: '0644'
