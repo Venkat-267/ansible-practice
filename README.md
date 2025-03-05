@@ -1,4 +1,4 @@
-- Install:
+# Install:
 
 $ python3 -m pip install --user ansible
 
@@ -6,15 +6,15 @@ $ python3 -m pip install --user ansible
 
 ubuntu@ip
 
-- Pass less authentication:
+## Pass less authentication:
 
- - Using **SSH**:
+### Using **SSH**:
 
 `ssh-keygen`
 
 `ssh-copy-id -f "-o IdentityFile <.pem>" ubuntu@ip`
 
- - Using **Pass**:
+### Using **Pass**:
  Update sshd_config to yes for pass
 
 `sudo passwd ubuntu`
@@ -22,7 +22,7 @@ ubuntu@ip
 `sudo systemctl restart ssh`
 
 
-- Adhoc Commands:
+## Adhoc Commands:
 
 `ansible -i inventory.ini -m ping all/app/db<group>`
 
@@ -32,11 +32,11 @@ ubuntu@ip
 
 `ansible -i inventory.ini -m "shell" -a "apt update" all/app/db<group>`
 
-- Run a Playbook:
+## Run a Playbook:
 
 `ansible-playbook -i inventory.ini <playbook.yaml>`
 
-Playbook Format:
+### Playbook Format:
 
 ```
 hosts:
@@ -47,7 +47,7 @@ tasks:
     - module
 ```
 
-Sample:
+### Sample:
 
 ```
 ---
