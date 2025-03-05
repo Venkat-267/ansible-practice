@@ -10,7 +10,7 @@
     - name: Copy file to remote server
       ansible.builtin.copy:
         src: index.html
-        dest: /var/www/index.html
+        dest: /var/www/html/index.html
         owner: root
         group: root
         mode: '0644'
