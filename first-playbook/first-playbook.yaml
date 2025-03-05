@@ -5,7 +5,7 @@
     - name: Install apache httpd
       ansible.builtin.apt:
         name: apache2
-        state: present
+        state: absent
         update_cache: yes
     - name: Copy file to remote server
       ansible.builtin.copy:
